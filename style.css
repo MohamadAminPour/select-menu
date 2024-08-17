@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root {
+    --green: #04a777;
+    --black1: #212529;
+    --black2: #44474a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--black1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.selectMenu {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.selectMenu-btn {
+    background-color: var(--green);
+    padding: 1rem;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 25rem;
+}
+
+.selectMenu-btn_text {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.selectMenu-btn_icon {
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.selectMenu-content {
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: var(--black2);
+    margin-top: 0.5rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.selectMenu-content.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.selectMenu-content__search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+    width: 100%;
+}
+
+.selectMenu-content__input {
+    position: absolute;
+    width: 100%;
+    padding: 1rem 3rem;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    background-color: var(--black2);
+    border: 2px solid #21252970;
+    border-radius: .5rem;
+    color: white;
+}
+
+.selectMenu-content__icon {
+    position: absolute;
+    font-size: 1.5rem;
+    color: var(--green);
+    cursor: pointer;
+    left: 1rem;
+}
+
+.selectMenu-content__list {
+    list-style: none;
+    padding: 1rem;
+    margin: 0;
+    width: 100%;
+    height: 16.5rem;
+    overflow-y: auto;
+}
+
+.selectMenu-content__item {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    cursor: pointer;
+    border-radius: .2rem;
+    padding: 0.3rem;
+}
+
+.selectMenu-content__item.active{
+    background-color: #2125292f;
+}
+
+.selectMenu-content__item:hover {
+    background-color: #2125292f;
+}
